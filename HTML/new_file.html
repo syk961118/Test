@@ -1,0 +1,42 @@
+<style>
+    .photo{
+        width:370px;
+        margin:0 auto;
+        height:370px;
+        border:1px solid #ccc;
+    }
+    .dialog-feat-btn1{
+        margin-right:30px;
+    }
+    .dialog-feat-btn2{
+        width:150px;
+    }
+    .photo>img{
+        display: block;
+        width:100%;
+        height: 100%;
+    }
+</style>
+<form name="form" class="form-horizontal form-validation">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <strong></strong>
+        </div>
+        <div class="panel-body padder-md">
+            <div class="dialog-one">
+                <h2 style="text-align: center;padding:20px; color: #000;">当前封面</h2>
+                <div class="photo"><img  src="{{item.remark}}" ></div>
+                <h2 style="text-align: center;margin: 20px auto;color: #000;">确认删除?</h2>
+            </div>
+
+        </div>
+        <footer class="panel-footer text-right bg-light lter">
+            <button class="btn btn-default w-xs dialog-feat-btn1" ng-click="cancel()">取消</button>
+            <button class="btn btn-success w-xs m-l-xs dialog-feat-btn2"  ng-click="ok(item,load.list,book.id)">确认并发送私信</button>
+        </footer>
+    </div>
+    <!--<div ng-style="myObj2" class="loading" id="loadings2" style="width:100%;height:100%;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background-color:rgba(0,0,0,0.3);z-index:2000;">-->
+    <!--<div class="circle" style="position: absolute; left: 50%; top: 35%; width: 8px; height: 8px; -webkit-transform: translate3d(-50%, -70%, 0);-moz-transform: translate3d(-50%, -70%, 0); transform: translate3d(-50%, -40%, 0); background-color: rgba(255,255,255,.5);; box-shadow: -14px 0px 0px rgba(255,255,255,1); border-radius: 50%; -webkit-animation: circle_classic 1s ease-in-out infinite alternate; -moz-animation: circle_classic 1s ease-in-out infinite alternate; animation: circle_classic 1s ease-in-out infinite alternate;"></div>-->
+    <!--<div class="load-txt" style="position:absolute;width:100%;text-align:center;color:#fff;top:40%;">页面努力加载中...</div>-->
+    <!--</div>-->
+</form>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="AppModule">
+	<head>
+		<meta charset="UTF-8">
+		<title>angular 测试</title>
+        <script src="http://code.angularjs.org/angular-1.0.1.min.js"></script>
+	</head>
+	<body>
+			Your name: <input type="text" ng-model="yourname" />
+			<hr />
+			Hello {{yourname||"sunyinkang"}}	
+			<hr />
+			<div ng-controller="MyController">
+				{{person.name}}
+				<hr />
+				<h5>{{clock}}</h5>
+			</div>
+			
+			<input ng-model="name" name="Name" placeholder="输入你的名字" />
+			<div>{{name}}</div>
+			
+			<script>
+				var myApp = angular.module("AppModule",[]);
+				myApp.controller('MyController',function($scope){
+					$scope.person = {name:"Ahui"};
+					//申明了一个函数
+					var updateClock = function(){
+						$scope.clock = new Date();
+					};
+					//申明了一个计时器
+					var timer = setInterval(function(){
+						console.log(11);
+					},1000);
+					updateClock();
+				});
+		</script>
+	</body>
+</html>

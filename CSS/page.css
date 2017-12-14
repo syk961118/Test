@@ -1,0 +1,16 @@
+body{
+	padding: 0;
+	margin: 0;
+}
+.container{
+	margin: 5%  3%;
+}
+
+.lattice{
+	width: 30%;
+	background-color: orange;
+	float: left;
+	padding: 30% 0 0 0;
+	margin: 0 3% 3%  0;
+	border-radius: 10px;
+}
